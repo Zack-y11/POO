@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Clase 12</title>
+</head>
+
+<body style="margin-left: 25%;">
+	<img src="https://imgs.search.brave.com/h40q69MeDRZvEdVcupK0bZHDGYb1bBRIDvDAVdKASzM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMWNz/YXJrejhvYmU5dS5j/bG91ZGZyb250Lm5l/dC9wb3N0ZXJwcmV2/aWV3cy9mYXN0LWZv/b2QtbG9nby1kZXNp/Z24tdGVtcGxhdGUt/NWUzZDRmZDJmYjk0/ZTAyODQ2OWIyN2Mz/ZmM4NDJjOTJfc2Ny/ZWVuLmpwZz90cz0x/NTcwNTkzNjI1"
+		width="150" height="150" />
+	<h1>Big Bear</h1>
+	<p>Restaurante de oriente</p>
+	<h2>Menu de comida</h2>
+	<fieldset style="width: 500px;">
+		<label for="apellido">Apellido</label>
+		<br />
+		<input type="text" id="apellido" />
+		<br />
+		<label for="productName">Nombre de Producto ("Tacos de Birria", "Hamburguesa con Papas",
+			"Nachos")</label>
+		<br />
+		<input type="text" id="productName" />
+		<br />
+		<label for="quantity">Cantidad</label>
+		<br />
+		<input id="quantity" type="number" value="0" />
+	</fieldset>
+
+
+	<h2>Bebidas</h2>
+	<fieldset style="width: 500px;">
+		<label for="drinkName">Nombre de bebida ("Coca-cola", "Pepsi", "Fanta", "7up")</label>
+		<br />
+		<input id="drinkName" type="text" />
+		<br />
+		<label for="drinkQuantity">Cantidad</label>
+		<br />
+		<input type="number" value="0" id="drinkQuantity" />
+		<br />
+	</fieldset>
+
+	<button onclick="calcularTotal()">Calcular Total</button>
+	<br />
+	<br />
+	<label>Total: $<span id="productTotal"></span></label>
+	<br />
+	<button onclick="realizarPedido()">Realizar Pedido</button>
+
+	<h2>Estado de orden</h2>
+	<label id="apellidoOrden">Orden para: </label>
+	<table border="1" style="padding: 2px">
+		<thead>
+			<tr>
+				<td>Producto</td>
+				<td>Cantidad</td>
+				<td>Estado</td>
+			</tr>
+		</thead>
+		<tbody id="orderStatus"></tbody>
+	</table>
+	<script src="./script.js"></script>
+</body>
+
+</html>
