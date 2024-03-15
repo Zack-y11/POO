@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Perfil</title>
+</head>
+<body>
+    <div id="logo">
+        <h3>Conexus</h3>
+        <img src="./img/redes-sociales.png" alt="">
+    </div>
+    <h1>Perfil de Usuario</h1>
+    <div id="navbar">
+        <ul>
+            <li><a href="#informacionPersonal">Información Personal</a></li>
+            <li><a href="#publicaciones">   Publicaciones</a></li>
+            <li><a class="active" href="#mensajes">Mensajes</a></li>
+            <li><a class="red" href="./index.html">Cerrar Sesion</a></li>
+        </ul>
+    </div>
+    
+    <div id="perfil">
+        
+    </div>
+
+    <script>
+        const datosUsuario = JSON.parse(localStorage.getItem('datosUsuario'));
+
+        const vistaPerfil = document.getElementById('perfil');
+        vistaPerfil.innerHTML = `
+        <p class="infoRed para"><strong>Nombre: </strong>${datosUsuario.usuario}</p>
+        <p class="info para"><strong>Fecha de Nacimiento: </strong>${datosUsuario.nacimiento}</p>
+        <p class="infoRed para"><strong>Genero: </strong>${datosUsuario.genero}</p>
+        <p class="info para"><strong>Departamento: </strong>${datosUsuario.departamento}</p>
+        <p class="infoRed para"><strong>Ciudad: </strong>${datosUsuario.ciudad}</p>
+        <p class="info para"><strong>Numero de Telefono: </strong>${datosUsuario.telefono}</p>
+        <p class="infoRed para"><strong>Descripcion: </strong>${datosUsuario.descripcion}</p>
+        
+        `;
+    </script>
+</body>
+</html>
